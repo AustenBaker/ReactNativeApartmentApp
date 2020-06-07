@@ -2,34 +2,14 @@ import * as React from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import HomeScreen from './screens/HomeScreen';
+import FloorPlansScreen from './screens/FloorPlansScreen';
+import AmenitiesScreen from './screens/AmenitiesScreen';
 
 const instructions = Platform.select({
   ios: `Press Cmd+R to reload,\nCmd+D or shake for dev menu`,
   android: `Double tap R on your keyboard to reload,\nShake or press menu button for dev menu`,
 });
-
-//Screens
-function HomeScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Home!</Text>
-    </View>
-  );
-}
-function FloorPlanScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Here are our floor plans!!</Text>
-    </View>
-  );
-}
-function SettingsScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Settings!</Text>
-    </View>
-  );
-}
 
 //bottom tab navigation
 const Tab = createBottomTabNavigator();
@@ -37,8 +17,8 @@ function MyTabs() {
   return (
     <Tab.Navigator>
       <Tab.Screen name="Home" component={HomeScreen} />
-      <Tab.Screen name="Floor Plans" component={FloorPlanScreen} />
-      <Tab.Screen name="Settings" component={SettingsScreen} />
+      <Tab.Screen name="Floor Plans" component={FloorPlansScreen} />
+      <Tab.Screen name="Amenities" component={AmenitiesScreen} />
     </Tab.Navigator>
   );
 }
