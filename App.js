@@ -4,7 +4,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from './screens/HomeScreen';
 import FloorPlansScreen from './screens/FloorPlansScreen';
-import FloorPlansDetails from './screens/FloorPlanDetails';
 import AmenitiesScreen from './screens/AmenitiesScreen';
 
 const instructions = Platform.select({
